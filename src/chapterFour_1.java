@@ -16,6 +16,7 @@ class XCopy {
 }
 
 // B won't work, as the getTime (accessor) returns no value (void).
+//bladh blachadsf aasdfaf
 class Clock {
     private String time;
 
