@@ -15,7 +15,7 @@ class PartyHandshakes {
             // Prints value of 'i' through each loop for testing.
             System.out.println(i);
         }
-        // Prints the result amount of handshakes, 55.
+        // Prints the result amount of handshakes, 55
         System.out.println("There were " + total_handshakes + " handshakes at the party.");
     }
 }
