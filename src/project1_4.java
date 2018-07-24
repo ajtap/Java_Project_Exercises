@@ -33,9 +33,11 @@ class DRT {
     private double final_speed;
 
     public double getDistance() {
+
         return distance;
     }
     public void setDistance(double meters) {
+
         distance = meters;
     }
 
