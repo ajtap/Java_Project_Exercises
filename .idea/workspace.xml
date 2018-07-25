@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f699aa2-28b8-48e1-8430-a6b88553a350" name="Default" comment="" />
+    <list default="true" id="3f699aa2-28b8-48e1-8430-a6b88553a350" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/chapterFive_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapterFive_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapterSix_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java Project Exercises/PartyHandshakes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Project Exercises/PartyHandshakes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java Project Exercises/testingCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java Project Exercises/testingCode.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,15 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chapterThree_puzzle1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chapterThree_puzzle1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="chapterFour_1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chapterFour_1.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -30,11 +28,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="question4CS212.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="question4CS212.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/question4CS212.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chapterFive_1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chapterFive_1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chapterFive_2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chapterFive_2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chapterSix_1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/chapterSix_1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-227">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#902#0" expanded="true" />
+                <element signature="e#147#155#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,27 +94,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project1_2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project1_2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="72" selection-start-column="72" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project1_3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project1_3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-              <folding>
-                <element signature="e#553#554#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,6 +153,9 @@
         <option value="$PROJECT_DIR$/src/testingCode.java" />
         <option value="$PROJECT_DIR$/src/question3CS212.java" />
         <option value="$PROJECT_DIR$/src/question4CS212.java" />
+        <option value="$PROJECT_DIR$/src/chapterFive_1.java" />
+        <option value="$PROJECT_DIR$/src/chapterFive_2.java" />
+        <option value="$PROJECT_DIR$/src/chapterSix_1.java" />
       </list>
     </option>
   </component>
@@ -196,23 +207,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testingCode">
+  <component name="RunManager" selected="Application.ArrayListMagnet">
+    <configuration name="ArrayListMagnet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ArrayListMagnet" />
+      <module name="Java Project Exercises" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MultiFor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MultiFor" />
+      <module name="Java Project Exercises" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
     <configuration name="PartyHandshakes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PartyHandshakes" />
       <module name="Java Project Exercises" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="project1_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project1_4" />
-      <module name="Java Project Exercises" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="project1_5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="project1_5" />
-      <module name="Java Project Exercises" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="testCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -264,19 +275,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.project1_4" />
-      <item itemvalue="Application.project1_5" />
       <item itemvalue="Application.testCode" />
       <item itemvalue="Application.PartyHandshakes" />
       <item itemvalue="Application.testingCode" />
+      <item itemvalue="Application.MultiFor" />
+      <item itemvalue="Application.ArrayListMagnet" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayListMagnet" />
+        <item itemvalue="Application.MultiFor" />
         <item itemvalue="Application.testingCode" />
         <item itemvalue="Application.PartyHandshakes" />
         <item itemvalue="Application.testCode" />
-        <item itemvalue="Application.project1_5" />
-        <item itemvalue="Application.project1_4" />
       </list>
     </recent_temporary>
   </component>
@@ -319,11 +330,19 @@
       <option name="project" value="LOCAL" />
       <updated>1532471941798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added CS212 question comments.">
+      <created>1532554466353</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532554466353</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <frame x="-13" y="-13" width="1381" height="885" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -334,11 +353,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" x="1" y="309" width="1367" height="255" id="Run" order="2" visible="true" weight="0.32988358" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" x="1" y="309" width="1367" height="255" id="Run" order="2" visible="true" weight="0.32988358" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32988358" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945135" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -396,27 +415,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/chapterFour_puzzle1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project1_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project1_2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="72" selection-start-column="72" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project1_3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -764,7 +762,32 @@
     <entry file="file://$PROJECT_DIR$/src/question4CS212.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapterFive_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapterFive_2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapterSix_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#902#0" expanded="true" />
+            <element signature="e#147#155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
