@@ -15,8 +15,7 @@ class PartyHandshakes {
             // Prints value of 'i' through each loop for testing.
             System.out.println(i);
         }
-        // Prints the result amount of handshakes, 55        /* Makes a StringBuilder variable to hold the original string, allowing the use of different syntax
-        //        that can properly edit the string. */
+        // Prints the result amount of handshakes, 55.
         System.out.println("There were " + total_handshakes + " handshakes at the party.");
     }
 }
