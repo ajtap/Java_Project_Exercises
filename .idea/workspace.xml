@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f699aa2-28b8-48e1-8430-a6b88553a350" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SimplifiedAirlineReservationSystemC212.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimplifiedAirlineReservationSystemC212.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimplifiedAirlineReservationSystemC212.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,10 +75,11 @@
       <file leaf-file-name="SimplifiedAirlineReservationSystemC212.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SimplifiedAirlineReservationSystemC212.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+            <state relative-caret-position="1564">
+              <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
               <folding>
                 <element signature="e#96#104#0" expanded="true" />
+                <element signature="e#1109#1117#0" expanded="true" />
                 <element signature="e#2133#2141#0" expanded="true" />
               </folding>
             </state>
@@ -353,7 +354,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532650445226</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added airline project.">
+      <created>1533166625888</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1533166625888</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed type error in ArrayList">
+      <created>1533166673938</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1533166673938</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,7 +440,9 @@
     <MESSAGE value="added CS212 question comments." />
     <MESSAGE value="added exercises from chapters 5-6." />
     <MESSAGE value="added exercises from chapter 7." />
-    <option name="LAST_COMMIT_MESSAGE" value="added exercises from chapter 7." />
+    <MESSAGE value="added airline project." />
+    <MESSAGE value="fixed type error in ArrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed type error in ArrayList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -800,10 +817,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimplifiedAirlineReservationSystemC212.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        <state relative-caret-position="1564">
+          <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
           <folding>
             <element signature="e#96#104#0" expanded="true" />
+            <element signature="e#1109#1117#0" expanded="true" />
             <element signature="e#2133#2141#0" expanded="true" />
           </folding>
         </state>

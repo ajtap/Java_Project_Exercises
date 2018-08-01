@@ -89,9 +89,9 @@ class Flight {
     String originAirport;
     String destination;
     //Unknown Types?
-    tickets;
-    date;
-    departureTime;
+    int numTickets;
+    String date;
+    String departureTime;
 
     boolean matches(String d, double t, String from) {
         //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window.
