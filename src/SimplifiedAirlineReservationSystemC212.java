@@ -46,7 +46,7 @@ class Ticket {
 class Airline {
 
     //Instance variables.
-    ArrayList<Flights> flights = new ArrayList<Flights>();
+    ArrayList<Flight> flights = new ArrayList<Flight>();
     String name;
 
     void cancel(Ticket t) {
