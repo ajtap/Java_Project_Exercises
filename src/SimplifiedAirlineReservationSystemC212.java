@@ -109,7 +109,6 @@ class Ticket {
 
     void cancel() {
         //Cancels the ticket.
-        if ()
     }
 }
 
@@ -117,7 +116,7 @@ class Airline {
 
     //Instance variables.
     ArrayList<Flight> flights = new ArrayList<Flight>(); //Contains each flight within the airline.
-    String name; //Contains the airline name.
+    private String name; //Contains the airline name.
 
     //Constructor for class "Airline".
     public Airline() {
@@ -141,7 +140,7 @@ class Airline {
     void issueRefund(Ticket t) {
         /*Issues a refund --- it just prints a message to the screen about which passenger has been credited
         how much money since in this simulation we will not keep track of bank balances for passengers or airlines.*/
-        System.out.println(t.myPassenger + " has been issued $" + t.price + " as a refund for a canceled ticket.");
+        System.out.println(t.getMyAirline() + " has been issued $" + t.getPrice() + " as a refund for a canceled ticket.");
     }
 
     ArrayList<Flight> findFlights(String date, double time, String origin) {
@@ -150,8 +149,8 @@ class Airline {
 
     Ticket book(Passenger p, Flight f) {
         //Books a passenger on a flight.
-        for (int i = 0; i <= 100; i++) {
-            f.flightNumber = (Integer.parseIntMath.random())
+        for (int i = 0; i <= 10000; i++) {
+
         }
     }
 
@@ -171,16 +170,16 @@ class Flight {
 
     //Instance variables.
     ArrayList<Ticket> tickets = new ArrayList<Ticket>(); //Contains a list of the available tickets.
-    static int counter = 0; //Keeps track of the # of flights, and gives each flight a unique number.
-    int seats; //The # of seats on each flight.
-    int filledSeats = 0; //The # of filled seats on each flight.
-    int flightLength; //The approximate time the flight will last.
-    int flightNumber; //Unique flight number.
-    String airline; //Name of the airline.
-    String originAirport; //Current location of the flight.
-    String destination;
-    String date; //Date of the flight's departure.
-    String departureTime;
+    private static int counter; //Keeps track of the # of flights, and gives each flight a unique number.
+    private int seats; //The # of seats on each flight.
+    private int filledSeats; //The # of filled seats on each flight.
+    private int flightNumber; //Unique flight number.
+    private String flightLength; //The approximate time the flight will last.
+    private String airline; //Name of the airline.
+    private String originAirport; //Current location of the flight.
+    private String destination;
+    private String date; //Date of the flight's departure.
+    private String departureTime;
 
     //Constructor for class "Flight".
     public Flight() {
@@ -192,13 +191,66 @@ class Flight {
 
     }
 
+    //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
+    public static int getCounter() {
+        return counter;
+    }
+
+    public static void setCounter(int a) {
+        counter = a;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public int getFilledSeats() {
+        return filledSeats;
+    }
+
+    public void setFilledSeats(int a) {
+        filledSeats = a;
+    }
+
+    public int getFlightNumber() {
+        return flightNumber;
+    }
+
+    public String getFlightLength() {
+        return flightLength;
+    }
+
+    public String getAirline() {
+        return airline;
+    }
+
+    public String getOriginAirport() {
+        return originAirport;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String a) {
+        date = a;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
     boolean matches(String d, double t, String from) {
         //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window.
     }
 
     boolean hasSpace() {
         //Are there any empty spaces left?
-        if (seats > 0) {
+        if (getFilledSeats() < getSeats()) {
             return true;
         } else {
             return false;
