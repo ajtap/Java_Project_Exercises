@@ -11,8 +11,14 @@ class Passenger {
     private String address;
     private String phone;
 
+    Scanner input = new Scanner(System.in);
+    Passenger user = new Passenger(firstName, lastName);
+
     //Constructor for class "Passenger".
-    public Passenger() {
+    public Passenger(String f, String l) {
+        System.out.print("Enter your first and last name please: ");
+        firstName = input.next();
+        lastName = input.next();
 
     }
 
@@ -43,8 +49,8 @@ class Passenger {
     }
 
     ArrayList<Flight> findFlights(Airline a, String date, double time, String from) {
-        /*Finds all flights for an airline on a particular date within 4 hours of a particular departure
-        from a particular city.*/
+        //Finds all flights for an airline on a particular date within 4 hours of a particular departure
+        //from a particular city.
     }
 
     Ticket bookFlight(Flight f) {
@@ -54,6 +60,7 @@ class Passenger {
 
     boolean holdsTicket(Ticket t) {
         //Reports where the passenger holds a particular ticket.
+
     }
 }
 
@@ -119,8 +126,8 @@ class Airline {
     private String name; //Contains the airline name.
 
     //Constructor for class "Airline".
-    public Airline() {
-
+    public Airline(String n) {
+        name = n;
     }
 
     //Overrides toString() method for testing.
@@ -138,8 +145,8 @@ class Airline {
     }
 
     void issueRefund(Ticket t) {
-        /*Issues a refund --- it just prints a message to the screen about which passenger has been credited
-        how much money since in this simulation we will not keep track of bank balances for passengers or airlines.*/
+        //Issues a refund --- it just prints a message to the screen about which passenger has been credited
+        //how much money since in this simulation we will not keep track of bank balances for passengers or airlines.
         System.out.println(t.getMyAirline() + " has been issued $" + t.getPrice() + " as a refund for a canceled ticket.");
     }
 
@@ -155,9 +162,9 @@ class Airline {
     }
 
     double cost(Flight f) {
-        /*Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
-        tickets get more expensive as a flight fills up.*/
-        System.out.println(f.tickets.);
+        //Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
+        //tickets get more expensive as a flight fills up.
+        System.out.println(f.tickets);
         f.getCost();
     }
 
