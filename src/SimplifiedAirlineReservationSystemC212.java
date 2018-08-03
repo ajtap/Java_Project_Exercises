@@ -21,6 +21,7 @@ class Passenger {
 
     }
 
+    //Getters and setters for each instance variable in this class. (No setters for variables that won't change).
     public String getFirstName() {
         return firstName;
     }
@@ -77,6 +78,7 @@ class Ticket {
 
     }
 
+    //Getters & Setters for each instance variable in this class. (No setters for variables that won't change).
     public static int getCounter() {
         return counter;
     }
@@ -89,40 +91,20 @@ class Ticket {
         return ticketNumber;
     }
 
-    public void setTicketNumber(int a) {
-        ticketNumber = a;
-    }
-
     public double getPrice() {
         return price;
-    }
-
-    public void setPrice(double a) {
-        price = a;
     }
 
     public String getMyAirline() {
         return myAirline;
     }
 
-    public void setMyAirline(String a) {
-        myAirline = a;
-    }
-
     public String getMyPassenger() {
         return myPassenger;
     }
 
-    public void setMyPassenger(String a) {
-        myPassenger = a;
-    }
-
     public String getMyFlight() {
         return myFlight;
-    }
-
-    public void setMyFlight(String a) {
-        myFlight = a;
     }
 
     void cancel() {
@@ -145,6 +127,11 @@ class Airline {
     //Overrides toString() method for testing.
     public String toString() {
 
+    }
+
+    //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
+    public String getName() {
+        return name;
     }
 
     void cancel(Ticket t) {
