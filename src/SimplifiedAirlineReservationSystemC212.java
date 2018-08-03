@@ -6,10 +6,10 @@ class Passenger {
     //Instance variables.
     ArrayList<Ticket> myTickets = new ArrayList<Ticket>(); //Contains each ticket that the user books.
     //The below variables are user-input, and are the info of the user's passenger.
-    String firstName;
-    String lastName;
-    String address;
-    String phone;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private String phone;
 
     //Constructor for class "Passenger".
     public Passenger() {
@@ -19,6 +19,22 @@ class Passenger {
     //Overrides toString() method for testing.
     public String toString() {
 
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     void cancel(Ticket t) {
@@ -32,6 +48,7 @@ class Passenger {
 
     Ticket bookFlight(Flight f) {
         //Books a ticket for a particular flight (for the passenger).
+
     }
 
     boolean holdsTicket(Ticket t) {
@@ -42,13 +59,13 @@ class Passenger {
 class Ticket {
 
     //Instance variables.
-    static int counter = 0; //Keeps track of the # of tickets the user booked, and gives each ticket a unique number.
+    private static int counter; //Keeps track of the # of tickets the user booked, and gives each ticket a unique number.
     //The below variables contain info about each ticket that is booked.
-    int ticketNumber; //Unique ticket #
-    double price; //Ticket price
-    String myAirline; //The airline the ticket was issued from.
-    String myPassenger; //The name of the ticket owner (user).
-    String myFlight; //The name of the flight the ticket books.
+    private int ticketNumber; //Unique ticket #
+    private double price; //Ticket price
+    private String myAirline; //The airline the ticket was issued from.
+    private String myPassenger; //The name of the ticket owner.
+    private String myFlight; //The name of the flight the ticket books.
 
     //Constructor for class "Ticket".
     public Ticket() {
@@ -58,6 +75,54 @@ class Ticket {
     //Overrides toString() method for testing.
     public String toString() {
 
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+    public static void setCounter(int a) {
+        counter = a;
+    }
+
+    public int getTicketNumber() {
+        return ticketNumber;
+    }
+
+    public void setTicketNumber(int a) {
+        ticketNumber = a;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double a) {
+        price = a;
+    }
+
+    public String getMyAirline() {
+        return myAirline;
+    }
+
+    public void setMyAirline(String a) {
+        myAirline = a;
+    }
+
+    public String getMyPassenger() {
+        return myPassenger;
+    }
+
+    public void setMyPassenger(String a) {
+        myPassenger = a;
+    }
+
+    public String getMyFlight() {
+        return myFlight;
+    }
+
+    public void setMyFlight(String a) {
+        myFlight = a;
     }
 
     void cancel() {
@@ -98,11 +163,16 @@ class Airline {
 
     Ticket book(Passenger p, Flight f) {
         //Books a passenger on a flight.
+        for (int i = 0; i <= 100; i++) {
+            f.flightNumber = (Integer.parseIntMath.random())
+        }
     }
 
     double cost(Flight f) {
-        /*Gives the cost of a ticket for  particular flight. Devise your own sensible pricing policy so that
+        /*Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
         tickets get more expensive as a flight fills up.*/
+        System.out.println(f.tickets.);
+        f.getCost();
     }
 
     void createFlight(double time, int numSeats, String from, String to) {
