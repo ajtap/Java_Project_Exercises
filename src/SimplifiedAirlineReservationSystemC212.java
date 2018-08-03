@@ -1,4 +1,4 @@
-//Imports ArrayLists and other utilities.
+//Imports ArrayLists, Scanner, and other utilities.
 import java.util.*;
 
 class Passenger {
@@ -141,6 +141,11 @@ class Flight {
 
     boolean hasSpace() {
         //Are there any empty spaces left?
+        if (seats > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     void addTicket(Ticket t) {
