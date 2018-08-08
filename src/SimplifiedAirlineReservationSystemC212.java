@@ -16,6 +16,7 @@ class Passenger {
 
     //Constructor for class "Passenger".
     public Passenger(String f, String l) {
+        //Not entirely sure if this works.
         System.out.print("Enter your first and last name please: ");
         firstName = input.next();
         lastName = input.next();
@@ -170,6 +171,8 @@ class Airline {
 
     void createFlight(double time, int numSeats, String from, String to) {
         //Creates a new flight for the Airline and makes sure that this flight operates everyday.
+        flights.add(new Flight(time, numSeats, from, to));
+        Flight.setCounter(Flight.getCounter() + 1);
     }
 }
 
@@ -186,11 +189,14 @@ class Flight {
     private String originAirport; //Current location of the flight.
     private String destination;
     private String date; //Date of the flight's departure.
-    private String departureTime;
+    private double departureTime;
 
     //Constructor for class "Flight".
-    public Flight() {
-
+    public Flight(double ti, int nu, String fr, String to) {
+        setDepartureTime(ti);
+        setSeats(nu);
+        setOriginAirport(fr);
+        setDestination(to);
     }
 
     //Overrides toString() method for testing.
@@ -209,6 +215,10 @@ class Flight {
 
     public int getSeats() {
         return seats;
+    }
+
+    public void setSeats(int a) {
+        seats = a;
     }
 
     public int getFilledSeats() {
@@ -235,8 +245,16 @@ class Flight {
         return originAirport;
     }
 
+    public void setOriginAirport(String a) {
+        originAirport = a;
+    }
+
     public String getDestination() {
         return destination;
+    }
+
+    public void setDestination(String a) {
+        destination = a;
     }
 
     public String getDate() {
@@ -247,8 +265,12 @@ class Flight {
         date = a;
     }
 
-    public String getDepartureTime() {
+    public double getDepartureTime() {
         return departureTime;
+    }
+
+    public void setDepartureTime(double a) {
+        departureTime = a;
     }
 
     boolean matches(String d, double t, String from) {
