@@ -4,22 +4,16 @@ import java.util.*;
 class Passenger {
 
     //Instance variables.
-    ArrayList<Ticket> myTickets = new ArrayList<Ticket>(); //Contains each ticket that the user books.
-    //The below variables are user-input, and are the info of the user's passenger.
+    ArrayList<Ticket> myTickets = new ArrayList<Ticket>(); //Contains each ticket that the passenger books.
+    //The below variables are the info of each passenger.
     private String firstName;
     private String lastName;
     private String address;
     private String phone;
 
-    Scanner input = new Scanner(System.in);
-    Passenger user = new Passenger(firstName, lastName);
-
     //Constructor for class "Passenger".
-    public Passenger(String f, String l) {
-        //Not entirely sure if this works.
-        System.out.print("Enter your first and last name please: ");
-        firstName = input.next();
-        lastName = input.next();
+    public Passenger() {
+
 
     }
 
@@ -33,8 +27,16 @@ class Passenger {
         return firstName;
     }
 
+    public void setFirstName(String a) {
+        firstName = a;
+    }
+
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String a) {
+        lastName = a;
     }
 
     public String getAddress() {
@@ -77,8 +79,13 @@ class Ticket {
     private String myFlight; //The name of the flight the ticket books.
 
     //Constructor for class "Ticket".
-    public Ticket() {
-
+    public Ticket(Airline ai, String pa, String fl, double pr) {
+        setMyAirline(ai.getName());
+        setMyPassenger(pa);
+        setMyFlight(fl);
+        setPrice(pr);
+        setCounter(getCounter() + 1);
+        setTicketNumber(getCounter());
     }
 
     //Overrides toString() method for testing.
@@ -99,20 +106,40 @@ class Ticket {
         return ticketNumber;
     }
 
+    public void setTicketNumber(int a) {
+        ticketNumber = a;
+    }
+
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double a) {
+        price = a;
     }
 
     public String getMyAirline() {
         return myAirline;
     }
 
+    public void setMyAirline(String a) {
+        myAirline = a;
+    }
+
     public String getMyPassenger() {
         return myPassenger;
     }
 
+    public void setMyPassenger(String a) {
+        myPassenger = a;
+    }
+
     public String getMyFlight() {
         return myFlight;
+    }
+
+    public void setMyFlight(String a) {
+        myFlight = a;
     }
 
     void cancel() {
@@ -128,7 +155,7 @@ class Airline {
 
     //Constructor for class "Airline".
     public Airline(String n) {
-        name = n;
+         setName(n);
     }
 
     //Overrides toString() method for testing.
@@ -139,6 +166,10 @@ class Airline {
     //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
     public String getName() {
         return name;
+    }
+
+    public void setName(String a) {
+        name = a;
     }
 
     void cancel(Ticket t) {
@@ -157,15 +188,16 @@ class Airline {
 
     Ticket book(Passenger p, Flight f) {
         //Books a passenger on a flight.
-        for (int i = 0; i <= 10000; i++) {
-
-        }
+        p.setFirstName("");
+        p.setLastName("");
+        Ticket.setCounter(Ticket.getCounter() + 1);
+        f.setFilledSeats(f.getFilledSeats() + 1);
     }
 
     double cost(Flight f) {
         //Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
         //tickets get more expensive as a flight fills up.
-        System.out.println(f.tickets);
+
         f.getCost();
     }
 
@@ -187,9 +219,9 @@ class Flight {
     private String flightLength; //The approximate time the flight will last.
     private String airline; //Name of the airline.
     private String originAirport; //Current location of the flight.
-    private String destination;
+    private String destination; //End location of the flight.
     private String date; //Date of the flight's departure.
-    private double departureTime;
+    private double departureTime; //Time of day the flight departs.
 
     //Constructor for class "Flight".
     public Flight(double ti, int nu, String fr, String to) {
@@ -241,6 +273,10 @@ class Flight {
         return airline;
     }
 
+    public void setAirline(Airline a) {
+        airline = a.getName();
+    }
+
     public String getOriginAirport() {
         return originAirport;
     }
@@ -274,7 +310,7 @@ class Flight {
     }
 
     boolean matches(String d, double t, String from) {
-        //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window.
+        //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window?
     }
 
     boolean hasSpace() {
