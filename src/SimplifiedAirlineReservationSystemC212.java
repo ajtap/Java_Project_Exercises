@@ -1,4 +1,5 @@
 //Imports ArrayLists, Scanner, and other utilities.
+import javax.swing.plaf.synth.SynthEditorPaneUI;
 import java.util.*;
 
 class Passenger {
@@ -10,6 +11,7 @@ class Passenger {
     private String lastName;
     private String address;
     private String phone;
+    Scanner user_input = new Scanner(System.in);
 
     //Constructor for class "Passenger".
     public Passenger() {
@@ -49,11 +51,27 @@ class Passenger {
 
     void cancel(Ticket t) {
         //Cancel's the passenger's ticket 't'.
+        System.out.println("which ticket");
+        user_input.next();
+        if (String.valueOf(user_input); == Integer.toString(t.getTicketNumber())) {
+            myTickets.remove(1);
+        }
     }
 
     ArrayList<Flight> findFlights(Airline a, String date, double time, String from) {
         //Finds all flights for an airline on a particular date within 4 hours of a particular departure
         //from a particular city.
+        ArrayList<Flight> valid = new ArrayList<Flight>();
+        for (int i = 0; i <= a.flights.size(); i++){
+            if (a.flights.get(i).getDate() == date) {
+                if (a.flights.get(i).getDepartureTime() == time) {
+                    if (a.flights.get(i).getOriginAirport() == from) {
+                        valid.add(a.flights.get(i));
+                    }
+                }
+            }
+        }
+        return valid;
     }
 
     Ticket bookFlight(Flight f) {
@@ -183,7 +201,6 @@ class Airline {
     }
 
     ArrayList<Flight> findFlights(String date, double time, String origin) {
-        //Finds all flights for a 4 hour departure window.
     }
 
     Ticket book(Passenger p, Flight f) {
@@ -327,7 +344,11 @@ class Flight {
     }
 
     boolean holdsTicket(Ticket ticket) {
-        //Does the flight already hold a particular ticket?
+        if (ticket.getMyFlight() != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     void remove(Ticket ticket) {
