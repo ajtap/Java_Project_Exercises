@@ -214,8 +214,6 @@ class Airline {
     double cost(Flight f) {
         //Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
         //tickets get more expensive as a flight fills up.
-
-        f.getCost();
     }
 
     void createFlight(double time, int numSeats, String from, String to) {
@@ -357,6 +355,8 @@ class Flight {
 
     double getCost() {
         //Use the flight's airline's method to generate the cost of the next ticket for this flight.
+        int start_cost = 150;
+        return start_cost + start_cost * (getFilledSeats());
     }
 }
 
