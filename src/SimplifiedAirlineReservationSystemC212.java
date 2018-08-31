@@ -45,15 +45,21 @@ class Passenger {
         return address;
     }
 
+    public void setAddress(String a) { address = a; }
+
     public String getPhone() {
         return phone;
     }
 
+    public void setPhone(String a) { phone = a; }
+
+    public Scanner getUser_input() { return  user_input; }
+
     void cancel(Ticket t) {
         //Cancel's the passenger's ticket 't'.
         System.out.println("which ticket");
-        user_input.next();
-        if (String.valueOf(user_input) == Integer.toString(t.getTicketNumber())) {
+        getUser_input().next();
+        if (String.valueOf(getUser_input()) == Integer.toString(t.getTicketNumber())) {
             myTickets.remove(1);
         }
     }
@@ -77,10 +83,12 @@ class Passenger {
     void bookFlight(Flight f) {
         //Books a ticket for a particular flight (for the passenger).
         System.out.print("Type the number of the flight you wish to book.");
-        user_input.next();
+        getUser_input().next();
         for (int i = 0; i <= f.getTickets().size(); i++) {
             if (holdsTicket(f.getTickets().get(i))) {
                 System.out.println("You already booked a ticket for this flight.");
+            } else if (f.hasSpace()) {
+                System.out.println("That flight is full.");
             } else {
                 myTickets.add(new Ticket(
                         f.getAirline(),
@@ -192,9 +200,8 @@ class Airline {
     }
 
     //Overrides toString() method for testing.
-    public String toString() {
+    // Not sure why I need an override or how it works.
 
-    }
 
     //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
     public String getName() {
@@ -227,12 +234,7 @@ class Airline {
         f.setFilledSeats(f.getFilledSeats() + 1);
     }
 
-    double cost(Flight f) {
-        //Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
-        //tickets get more expensive as a flight fills up.
-        int start_cost = 100;
-        return start_cost + (((7.50 * (f.getFilledSeats())) * f.getFlightLength()) * 1.1) ;
-    }
+    // Used to be a function called cost(0 with return type double and parameter Flight obj called f.
 
     void createFlight(double time, int numSeats, String from, String to) {
         //Creates a new flight for the Airline and makes sure that this flight operates everyday.
@@ -267,8 +269,7 @@ class Flight {
     }
 
     //Overrides toString() method for testing.
-    public String toString() {
-    }
+    // Not sure why I need an override or how it works.
 
     //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
     public static int getCounter() {
@@ -374,16 +375,22 @@ class Flight {
         }
     }
 
-    double getCost() {
+    double getCost(Flight f) {
         //Use the flight's airline's method to generate the cost of the next ticket for this flight.
-        return
+        // Not sure how to program this function without parameters.
+        /* This code is supposed to originally be in a cost() function in the Airline class, and this function originally
+        had no parameters. */
+        int start_cost = 100;
+        return start_cost + (((7.50 * (f.getFilledSeats())) * f.getFlightLength()) * 1.1) ;
     }
 }
 
 class Main {
     public static void main(String[] args) {
+        // Step 1: Creates an Airline object.
         Airline airline_sym = new Airline("American Delta");
 
+        // Step 2: Creates 10 flights for NY > CT.
         for (int i = 0; i < 11; i++) {
             airline_sym.createFlight(
                     (double) Math.random() * 25,
@@ -393,6 +400,7 @@ class Main {
             );
         }
 
+        // Creates 9 flights for CT > NY.
         for (int i = 0; i < 10; i++) {
             airline_sym.createFlight(
                     (double) Math.random() * 25,
@@ -401,6 +409,36 @@ class Main {
                     "New York"
             );
         }
+
+        // Step 3: Generate 1000 AI passengers to fill random seats.
+        for (int i = 0; i < 1001; i++) {
+            for (int s = 0; s <= airline_sym.flights.size(); s++) {
+                airline_sym.book(new Passenger(), airline_sym.flights.get(s));
+                airline_sym.flights.get(s).setFilledSeats(airline_sym.flights.get(s).getFilledSeats() +
+                                ((int) (Math.random() * airline_sym.flights.get(s).getSeats()) + 1));
+            }
+        }
+
+        //Step 4: Asks for user data.
+        Passenger user = new Passenger();
+
+        System.out.println("Enter your first name please: ");
+        user.getUser_input().next();
+        user.setFirstName(user.getUser_input().toString());
+
+        System.out.println("Enter your last name please: ");
+        user.getUser_input().next();
+        user.setLastName(user.getUser_input().toString());
+
+        System.out.println("Enter your address on one line please: ");
+        user.getUser_input().next();
+        user.setAddress(user.getUser_input().toString());
+
+        System.out.println("Enter your phone number on one line please: ");
+        user.getUser_input().next();
+        user.setPhone(user.getUser_input().toString());
+
+        //Ask user where they want to book a flight, when, or if they want to cancel one.
     }
 
 }
