@@ -231,7 +231,7 @@ class Airline {
         //Gives the cost of a ticket for a particular flight. Devise your own sensible pricing policy so that
         //tickets get more expensive as a flight fills up.
         int start_cost = 100;
-        return start_cost + start_cost * (f.getFilledSeats());
+        return start_cost + (((7.50 * (f.getFilledSeats())) * f.getFlightLength()) * 1.1) ;
     }
 
     void createFlight(double time, int numSeats, String from, String to) {
@@ -249,7 +249,7 @@ class Flight {
     private int seats; //The # of seats on each flight.
     private int filledSeats; //The # of filled seats on each flight.
     private int flightNumber; //Unique flight number.
-    private String flightLength; //The approximate time the flight will last.
+    private int flightLength; //The approximate time the flight will last.
     private String airline; //Name of the airline.
     private String originAirport; //Current location of the flight.
     private String destination; //End location of the flight.
@@ -262,11 +262,12 @@ class Flight {
         setSeats(nu);
         setOriginAirport(fr);
         setDestination(to);
+        flightNumber = getFlightNumber() + 1;
+        flightLength = (int) (Math.random() * 17) + 10;
     }
 
     //Overrides toString() method for testing.
     public String toString() {
-
     }
 
     //Getters & setters for each instance variable in this class. (No setters for variables that won't change).
@@ -298,7 +299,7 @@ class Flight {
         return flightNumber;
     }
 
-    public String getFlightLength() {
+    public int getFlightLength() {
         return flightLength;
     }
 
@@ -381,7 +382,25 @@ class Flight {
 
 class Main {
     public static void main(String[] args) {
+        Airline airline_sym = new Airline("American Delta");
 
+        for (int i = 0; i < 11; i++) {
+            airline_sym.createFlight(
+                    (double) Math.random() * 25,
+                    (int) (Math.random() * 251) + 1,
+                    "New York",
+                    "Connecticut"
+            );
+        }
+
+        for (int i = 0; i < 10; i++) {
+            airline_sym.createFlight(
+                    (double) Math.random() * 25,
+                    (int) (Math.random() * 251) + 1,
+                    "Connecticut",
+                    "New York"
+            );
+        }
     }
 
 }
