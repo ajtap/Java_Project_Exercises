@@ -5,13 +5,13 @@ import java.util.*;
 class Passenger {
 
     //Instance variables.
-    ArrayList<Ticket> myTickets = new ArrayList<Ticket>(); //Contains each ticket that the passenger books.
+    private ArrayList<Ticket> myTickets = new ArrayList<Ticket>(); //Contains each ticket that the passenger books.
     //The below variables are the info of each passenger.
     private String firstName;
     private String lastName;
     private String address;
     private String phone;
-    Scanner user_input = new Scanner(System.in);
+    private Scanner user_input = new Scanner(System.in);
 
     //Constructor for class "Passenger".
     public Passenger() {
@@ -53,7 +53,7 @@ class Passenger {
         //Cancel's the passenger's ticket 't'.
         System.out.println("which ticket");
         user_input.next();
-        if (String.valueOf(user_input); == Integer.toString(t.getTicketNumber())) {
+        if (String.valueOf(user_input) == Integer.toString(t.getTicketNumber())) {
             myTickets.remove(1);
         }
     }
@@ -62,7 +62,7 @@ class Passenger {
         //Finds all flights for an airline on a particular date within 4 hours of a particular departure
         //from a particular city.
         ArrayList<Flight> valid = new ArrayList<Flight>();
-        for (int i = 0; i <= a.flights.size(); i++){
+        for (int i = 0; i <= a.flights.size(); i++) {
             if (a.flights.get(i).getDate() == date) {
                 if (a.flights.get(i).getDepartureTime() == time) {
                     if (a.flights.get(i).getOriginAirport() == from) {
@@ -74,14 +74,28 @@ class Passenger {
         return valid;
     }
 
-    Ticket bookFlight(Flight f) {
+    void bookFlight(Flight f) {
         //Books a ticket for a particular flight (for the passenger).
-
+        System.out.print("Type the number of the flight you wish to book.");
+        user_input.next();
+        for (int i = 0; i <= f.getTickets().size(); i++) {
+            if (holdsTicket(f.getTickets().get(i))) {
+                System.out.println("You already booked a ticket for this flight.");
+            } else {
+                myTickets.add(new Ticket(
+                        f.getAirline(),
+                        getFirstName() + " " + getLastName(),
+                        f.getOriginAirport() + " to " + f.getDestination(),
+                        f.getCost()));
+                System.out.println("Successfully Booked Ticket.");
+            }
+            // Not sure why this needs a return statement. (Originally returns type Ticket)
+        }
     }
 
     boolean holdsTicket(Ticket t) {
         //Reports where the passenger holds a particular ticket.
-
+        return myTickets.contains(t);
     }
 }
 
@@ -97,8 +111,8 @@ class Ticket {
     private String myFlight; //The name of the flight the ticket books.
 
     //Constructor for class "Ticket".
-    public Ticket(Airline ai, String pa, String fl, double pr) {
-        setMyAirline(ai.getName());
+    public Ticket(String ai, String pa, String fl, double pr) {
+        setMyAirline(ai);
         setMyPassenger(pa);
         setMyFlight(fl);
         setPrice(pr);
@@ -191,7 +205,8 @@ class Airline {
     }
 
     void cancel(Ticket t) {
-        //Cancels a ticket.
+        //Remove a cancelled ticket from the flight.
+        // Not sure why this is here, when the cancel() function in Flights can be used.
     }
 
     void issueRefund(Ticket t) {
@@ -228,7 +243,7 @@ class Airline {
 class Flight {
 
     //Instance variables.
-    ArrayList<Ticket> tickets = new ArrayList<Ticket>(); //Contains a list of the available tickets.
+    private ArrayList<Ticket> tickets = new ArrayList<Ticket>(); //Contains a list of the available tickets.
     private static int counter; //Keeps track of the # of flights, and gives each flight a unique number.
     private int seats; //The # of seats on each flight.
     private int filledSeats; //The # of filled seats on each flight.
@@ -326,33 +341,34 @@ class Flight {
         departureTime = a;
     }
 
+    public ArrayList<Ticket> getTickets() { return tickets; }
+
     boolean matches(String d, double t, String from) {
         //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window?
     }
 
     boolean hasSpace() {
         //Are there any empty spaces left?
-        if (getFilledSeats() < getSeats()) {
-            return true;
-        } else {
-            return false;
-        }
+        return (getFilledSeats() < getSeats());
     }
 
     void addTicket(Ticket t) {
         //Add a newly issued ticket to the flight.
+        getTickets().add(t);
+        // Might need revision.
     }
 
     boolean holdsTicket(Ticket ticket) {
-        if (ticket.getMyFlight() != null) {
-            return true;
-        } else {
-            return false;
-        }
+        return (ticket.getMyFlight() != null);
     }
 
     void remove(Ticket ticket) {
         //Remove a cancelled ticket from the flight.
+        for (int i = 0; i <= tickets.size(); i++) {
+            if (ticket.getTicketNumber() == getTickets().get(i).getTicketNumber()) {
+                getTickets().remove(i);
+            }
+        }
     }
 
     double getCost() {
