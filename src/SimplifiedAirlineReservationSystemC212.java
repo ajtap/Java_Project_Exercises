@@ -176,6 +176,7 @@ class Ticket {
 
     void cancel() {
         //Cancels the ticket.
+        // Not sure why this is here, when the cancel() function in Flights can be used.
     }
 }
 
@@ -345,6 +346,7 @@ class Flight {
 
     boolean matches(String d, double t, String from) {
         //Does the flight match date 'd', time 't' and originAirport 'from' to within a 4 hour departure window?
+        return (d == getDate() & t == getDepartureTime() & from == getOriginAirport());
     }
 
     boolean hasSpace() {
@@ -373,6 +375,7 @@ class Flight {
 
     double getCost() {
         //Use the flight's airline's method to generate the cost of the next ticket for this flight.
+        return
     }
 }
 
